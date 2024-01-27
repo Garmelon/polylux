@@ -52,7 +52,10 @@ Does not accept additional content.
 Decorates the provided content with a header containing the slide title and a
 footer containing some custom text and the slide number.
 
-Pass the slide title as a keyword argument `title` (default: `none`).
+Accepts the following keyword arguments:
+
+- `title`: slide title, default: `none`
+- `progress`: show progress bar below title, default: `false`
 
 ---
 

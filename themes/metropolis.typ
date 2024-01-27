@@ -86,14 +86,23 @@
   logic.polylux-slide(content)
 }
 
-#let slide(title: none, body) = {
+#let slide(
+  title: none,
+  progress: false,
+  body,
+) = {
   let header = {
     set align(top)
     if title != none {
-      show: m-cell.with(fill: m-dark-teal, inset: 1em)
-      set align(horizon)
-      set text(fill: m-extra-light-gray, size: 1.2em)
-      strong(title)
+      {
+        show: m-cell.with(fill: m-dark-teal, inset: 1em)
+        set align(horizon)
+        set text(fill: m-extra-light-gray, size: 1.2em)
+        strong(title)
+      }
+      if progress {
+        block(height: 2pt, width: 100%, spacing: 0pt, m-progress-bar)
+      }
     } else { [] }
   }
 
